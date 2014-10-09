@@ -1,0 +1,79 @@
+<h4>Manage contact</h4>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+	<h3 class="panel-title"><b>{{ status }} Contact</b></h3>
+  </div>
+  <div class="panel-body">
+	<form name="ContactForm" class="form-horizontal" role="form" novalidate ng-submit="submitForm(contact)">
+	  <div class="form-group" ng-class="{'has-error': ContactForm.txtName.$invalid && ContactForm.txtName.$dirty}">
+		<label for="txtName" class="col-sm-2 control-label">Name</label>
+		<div class="col-sm-10">
+		  <input type="text" class="form-control" name="txtName" maxlength="100" placeholder="Enter name" required ng-model="contact.name">
+		  <span ng-show="ContactForm.txtName.$invalid && !ContactForm.txtName.$pristine" class="text-danger">Enter contact name</span>
+		</div>
+	  </div>
+	  <div class="form-group" ng-class="{'has-error': ContactForm.txtEmail.$invalid && ContactForm.txtEmail.$dirty}">
+		<label for="txtEmail" class="col-sm-2 control-label">Email</label>
+		<div class="col-sm-10">
+		  <input type="email" class="form-control" name="txtEmail" maxlength="100" placeholder="Enter email" required ng-model="contact.email">
+		  <span ng-show="ContactForm.txtEmail.$invalid && !ContactForm.txtEmail.$pristine" class="text-danger">Enter a valid email</span>
+		</div>
+	  </div>
+	  <div class="form-group" ng-class="{'has-error': ContactForm.txtPhone.$invalid && ContactForm.txtPhone.$dirty}">
+		<label for="txtPhone" class="col-sm-2 control-label">Phone</label>
+		<div class="col-sm-10">
+		  <input type="number" class="form-control" name="txtPhone" maxlength="20" placeholder="Enter phone" required ng-model="contact.phone">
+		  <span ng-show="ContactForm.txtPhone.$invalid && !ContactForm.txtPhone.$pristine" class="text-danger">Enter a valid phone number</span>
+		</div>
+	  </div>
+	  <div class="form-group" ng-class="{'has-error': ContactForm.txtAdd1.$invalid && ContactForm.txtAdd1.$dirty}">
+		<label for="txtAdd1" class="col-sm-2 control-label">Address</label>
+		<div class="col-sm-10">
+		  <input type="text" class="form-control" name="txtAdd1" maxlength="50" placeholder="Enter address" required ng-model="contact.add1">
+		  <span ng-show="ContactForm.txtAdd1.$invalid && !ContactForm.txtAdd1.$pristine" class="text-danger">Enter address</span>
+		</div>
+	  </div>
+	  <div class="form-group">
+		<label for="txtAdd2" class="col-sm-2 control-label">&nbsp;</label>
+		<div class="col-sm-10">
+		  <input type="text" class="form-control" name="txtAdd2" maxlength="50" placeholder="Enter address" ng-model="contact.add2">
+		</div>
+	  </div>
+	  <div class="form-group" ng-class="{'has-error': ContactForm.txtCity.$invalid && ContactForm.txtCity.$dirty}">
+		<label for="txtCity" class="col-sm-2 control-label">City</label>
+		<div class="col-sm-10">
+		  <input type="text" class="form-control" name="txtCity" maxlength="50" placeholder="Enter city" required ng-model="contact.city">
+		  <span ng-show="ContactForm.txtCity.$invalid && !ContactForm.txtCity.$pristine" class="text-danger">Enter city</span>
+		</div>
+	  </div>
+	  <div class="form-group" ng-class="{'has-error': ContactForm.txtState.$invalid && ContactForm.txtState.$dirty}">
+		<label for="txtState" class="col-sm-2 control-label">State</label>
+		<div class="col-sm-10">
+		  <input type="text" class="form-control" name="txtState" maxlength="50" placeholder="Enter state" required ng-model="contact.state">
+		  <span ng-show="ContactForm.txtState.$invalid && !ContactForm.txtState.$pristine" class="text-danger">Enter state</span>
+		</div>
+	  </div>
+	  <div class="form-group" ng-class="{'has-error': ContactForm.txtCountry.$invalid && ContactForm.txtCountry.$dirty}">
+		<label for="txtCountry" class="col-sm-2 control-label">Country</label>
+		<div class="col-sm-10">
+		  <input type="text" class="form-control" name="txtCountry" maxlength="50" placeholder="Enter country" required ng-model="contact.country">
+		  <span ng-show="ContactForm.txtCountry.$invalid && !ContactForm.txtCountry.$pristine" class="text-danger">Enter country</span>
+		</div>
+	  </div>
+	  <div class="form-group" ng-class="{'has-error': ContactForm.txtZip.$invalid && ContactForm.txtZip.$dirty}">
+		<label for="txtZip" class="col-sm-2 control-label">Zip</label>
+		<div class="col-sm-10">
+		  <input type="number" class="form-control" name="txtZip" maxlength="10" placeholder="Enter zip" required ng-model="contact.zip">
+		  <span ng-show="ContactForm.txtZip.$invalid && !ContactForm.txtZip.$pristine" class="text-danger">Enter a valid ZIP</span>
+		</div>
+	  </div>
+	  <div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+		  <input type="submit" class="btn btn-primary" value="Submit" ng-disabled="ContactForm.$invalid">
+		</div>
+	  </div>
+	</form>
+  </div>
+</div>
+			
