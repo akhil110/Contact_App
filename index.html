@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="ContactsApp">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Contacts App</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="lib/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+
+	<body>
+
+		<div class="container">
+			<div class="header">
+				<ul class="nav nav-pills pull-right" data-ng-controller="NavbarController">
+					<li data-ng-class="{'active':getClass('/all-contacts')}"><a href="#/all-contacts">All Contacts</a></li>
+					<li data-ng-class="{'active':getClass('/add-contacts')}"><a href="#/add-contacts">Add Contact</a></li>
+				</ul>
+				
+				<h3>Address Book</h3>
+			</div>
+			<hr>
+			
+			<div ng-view></div>
+
+			<hr>
+			<div class="footer">
+				<p>&copy; Address Book 2014</p>
+			</div>
+
+		</div> <!-- /container -->
+		
+		<!-- Vendor Libs: -->
+		<script src="lib/js/angular.min.js"></script>
+		<script src="lib/js/angular-route.min.js"></script>
+		<script src="lib/js/jquery.min.js"></script>
+
+		<!-- UI Libs -->
+		<script src="lib/js/bootstrap.min.js"></script>
+
+		<!-- App libs -->
+		<script src="app/app.js"></script>
+		<script src="app/appService.js"></script>
+		
+	</body>
+</html>
